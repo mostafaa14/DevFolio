@@ -1,0 +1,53 @@
+/* START NAV */
+@media screen and (min-width: 992px) {
+  #my-nav .nav-link {
+    position: relative;
+    color: var(--main-color);
+  }
+  #my-nav .nav-link::before {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    transition: all 0.5s;
+  }
+  #my-nav .nav-link:hover::before {
+    width: 70%;
+  }
+  #my-nav .nav-link:hover {
+    color: var(--main-color);
+  }
+  body:not(body:has(:target)) #my-nav .nav-link[href="#home"]::before,
+  body:has(#home:target) #my-nav .nav-link[href="#home"]::before,
+  body:has(#about:target) #my-nav .nav-link[href="#about"]::before,
+  body:has(#services:target) #my-nav .nav-link[href="#services"]::before,
+  body:has(#work:target) #my-nav .nav-link[href="#work"]::before,
+  body:has(#blog:target) #my-nav .nav-link[href="#blog"]::before,
+  body:has(#contact:target) #my-nav .nav-link[href="#contact"]::before {
+    width: 70%;
+  }
+}
+/* END NAV */
+
+/* START HEADER */
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+}
+/* END HEADER */
+
+@media screen and (max-width: 600px) {
+  #contact .container {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #arrow-up {
+    display: none;
+  }
+}
